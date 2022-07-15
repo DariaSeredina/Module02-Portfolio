@@ -71,10 +71,6 @@ body {
         align-items: center;
         margin-bottom: 60px;
     }
-    &__text {
-        font-weight: 700;
-        font-size: 1.6rem;
-    }
     &-social {
         display: flex;
         gap: 2rem;
@@ -83,8 +79,39 @@ body {
         font-size: 1.6rem;
         color: $black;
         text-decoration: none;
+        border-left: 1px solid rgba($black, .2);
+        padding-left: 2rem;
+        &_discuss {
+            font-weight: 700;
+            border-left: none;
+            padding: 0;
+            &:hover {
+                padding-bottom: 1rem;
+                border-bottom: 2px solid $black;
+            }
+        }
+        &_vk {
+            border: none;
+        }
         &:hover {
             color: $red;
+        }
+    }
+    &-skills {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        margin-bottom: 180px;
+        &__title {
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        &__text {
+            max-width: 242px;
+            font-size: 1.4rem;
+            color: rgba($black, .8);
         }
     }
 }
