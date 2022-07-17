@@ -24,13 +24,17 @@ body {
     padding-right: 15px;
 }
 
+header {
+    background-color: $grey;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.4rem;
-    margin-top: 41px;
-    margin-bottom: 62px;
+    padding-top: 41px;
+    padding-bottom: 62px;
     &__nav {
         display: flex;
         gap: 2rem;
@@ -52,6 +56,7 @@ body {
 }
 
 .main {
+    background-color: $grey;
     &__img {
         width: 100%;
         margin-bottom: 120px;
@@ -120,7 +125,7 @@ body {
         border-top: 1px solid $black;
         padding-top: 60px;
         margin-top: 60px;
-        margin-bottom: 180px;
+        padding-bottom: 180px;
         &__title {
             font-weight: 700;
             font-size: 1.6rem;
@@ -129,17 +134,21 @@ body {
             &_advantage {
                 letter-spacing: initial;
                 text-transform: initial;
+                margin-bottom: 2rem;
             }
         }
         &__text {
-            max-width: 242px;
+            max-width: 258px;
             font-size: 1.4rem;
             color: rgba($black, .8);
+            line-height: 150%;
         }
     }
 }
 
 .about {
+    background-color: $grey;
+    padding-bottom: 180px;
     &__content {
         display: flex;
         justify-content: space-between;
@@ -153,6 +162,7 @@ body {
     &__text {
         color: rgba($black, .8);
         max-width: 550px;
+        line-height: 150%;
     }
     &__advantage {
         border-top: 1px solid $black;
@@ -161,5 +171,31 @@ body {
         grid-template-columns: 220px 270px;
         gap: 7rem;
         justify-content: end;
+    }
+}
+
+.steps {
+    background-color: $grey;
+    padding-bottom: 91px;
+    &__step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $black;
+        padding: 39px 0;
+        &_03 {
+            border-bottom: 1px solid $black; 
+        }
+    }
+    &__number {
+        margin-right: 2rem;
+    }
+    &__title {
+        font-weight: 400;
+        margin: 0;
+    }
+    &__text {
+        font-size: 1.6rem;
+        color: rgba($black, .8);
     }
 }
