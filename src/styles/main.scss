@@ -297,4 +297,10 @@ header {
 
 .rate {
     background-color: $grey;
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $black;
+        padding-bottom: 76px;
+    }
 }
