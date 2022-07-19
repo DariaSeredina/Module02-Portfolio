@@ -251,7 +251,7 @@ header {
     &__item {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 4rem;
     }
     &__content {
         max-width: 250px;
@@ -266,4 +266,35 @@ header {
         line-height: 150%;
         color: rgba($black, .8);
     }
+}
+
+.tool {
+    background-color: $grey;
+    padding-bottom: 180px;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 286px);
+    }
+    &__item {
+        height: 146px;
+        border: 1px solid rgba($black, .3);
+    }
+    &__image {
+        display: block;
+        margin: 32px auto;
+        filter: grayscale(1);
+        opacity: 0.3;
+        transition: .3s;
+        &_php {
+            margin: 44px auto;
+        }
+        &:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+}
+
+.rate {
+    background-color: $grey;
 }
