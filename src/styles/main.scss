@@ -372,7 +372,51 @@ header {
 .feedback {
     background-color: $grey;
     padding-bottom: 130px;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: 1px solid $black;
+        padding-bottom: 130px;
+    }
+    &__content {
+        border-bottom: 1px solid $black;
+        padding-bottom: 155px;
+    }
     &__title {
         margin: 0;
+    }
+    &__text {
+        border-bottom: 1px solid $black;
+        padding-bottom: 70px;
+    }
+    &__social {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-end;
+    }
+    &__contact {
+        padding-top: 60px;
+    }
+    &__label {
+        font-size: 12px;
+        color: rgba($black, .8);
+    }
+    &__input {
+        display: block;
+        font-size: 12px;
+        color: rgba($black, .2);
+        border: none;
+        background-color: rgba($black, .05);
+        padding: 24px 438px 24px 20px;
+        margin-top: 12px;
+    }
+    &__button {
+        font-weight: 700;
+        font-size: 16px;
+        color: $white;
+        border: none;
+        background-color: $red;
+        padding: 21px 236px;
+        margin-top: 40px;
     }
 }
