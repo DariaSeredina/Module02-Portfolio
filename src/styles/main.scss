@@ -66,6 +66,20 @@ header {
     }
     &__name {
         font-size: 2.8rem;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            width: 253px;
+            height: 253px;
+            display: block;
+            background: $white;
+            border-radius: 150px;
+            position: absolute;
+            top: -59px;
+            left: -130px;
+            z-index: -1;
+        }
     }
     &__title {
         font-size: 7.4rem;
@@ -73,6 +87,8 @@ header {
         text-transform: uppercase;
         margin-top: 37px;
         margin-bottom: 106px;
+        position: relative;
+        z-index: 1;
     }
     &__contact {
         display: flex;
@@ -97,6 +113,7 @@ header {
             color: $red;
         }
         &_discuss {
+            font-weight: 700;
             border-left: none;
             padding: 0;
             display: flex;
