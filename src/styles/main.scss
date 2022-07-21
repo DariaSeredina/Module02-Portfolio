@@ -165,22 +165,20 @@ header {
         line-height: 150%;
     }
     &__advantage {
-        border-top: 1px solid $black;
-        padding-top: 60px;
         display: grid;
         grid-template-columns: 220px 270px;
-        gap: 7rem;
         justify-content: end;
+        grid-row-gap: 3.5rem;
+        grid-column-gap: 7rem;
+        border-top: 1px solid $black;
+        padding-top: 60px;
     }
 }
 
 .steps {
     background-color: $grey;
-    padding-bottom: 91px;
+    padding-bottom: 95px;
     &__step {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         border-top: 1px solid $black;
         padding: 39px 0;
         &_03 {
@@ -188,20 +186,26 @@ header {
         }
     }
     &__number {
-        margin-right: 2rem;
-    }
-    &__title {
-        font-weight: 400;
-        margin: 0;
+        margin-right: 3rem;
     }
     &__text {
+        margin: 0;
+    }
+    &__description {
         font-size: 1.6rem;
         color: rgba($black, .8);
+        margin-left: 50.9rem;
+        &_02 {
+            margin-left: 49rem;
+        }
+        &_03 {
+            margin-left: 45.2rem;
+        }
     }
     &__portfolio-title {
         font-size: 74px;
         text-transform: uppercase;
-        padding-top: 89px;
+        padding-top: 200px;
         padding-bottom: 110px;
         margin: 0;
     }
@@ -221,13 +225,16 @@ header {
         border-bottom: 1px solid $black;
         padding-bottom: 60px;
     }
+    &__name {
+        margin-top: 4.2rem;
+    }
     &__list {
         list-style-type: none;
         padding-left: 0;
         font-size: 1.6rem;
-        line-height: 150%;
+        line-height: 207%;
         color: rgba($black, .8);
-        margin: 40px 0;
+        margin: 41px 0;
     }
     &__text {
         font-weight: 700;
@@ -246,16 +253,21 @@ header {
         padding-bottom: 80px;
     }
     &__grid {
-        border-top: 1px solid $black;
-        padding-top: 80px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 4rem;
+        grid-column-gap: 20rem;
+        border-top: 1px solid $black;
+        padding-top: 80px;
         padding-bottom: 180px;
     }
     &__item {
         display: flex;
         align-items: center;
         gap: 4rem;
+    }
+    &__img {
+        margin-top: 1.4rem;
     }
     &__content {
         max-width: 250px;
@@ -269,6 +281,7 @@ header {
         font-size: 1.4rem;
         line-height: 150%;
         color: rgba($black, .8);
+        margin-top: 1rem;
     }
 }
 
@@ -277,7 +290,7 @@ header {
     padding-bottom: 120px;
     &__grid {
         display: grid;
-        grid-template-columns: repeat(4, 286px);
+        grid-template-columns: repeat(4, 360px);
     }
     &__item {
         height: 146px;
@@ -302,9 +315,11 @@ header {
 .rate {
     background-color: $grey;
     padding-bottom: 140px;
-    &__flex {
-        display: flex;
-        justify-content: space-between;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__grid-item {
         border-bottom: 1px solid $black;
         padding-top: 60px;
         padding-bottom: 76px;
@@ -315,11 +330,13 @@ header {
     &__title {
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        margin-top: 3.1rem;
     }
     &__text {
         line-height: 150%;
         color: rgba($black, .8);
-        max-width: 450px;
+        max-width: 555px;
+        margin-left: 15.7rem;
     }
     &__name {
         line-height: 150%;
@@ -330,7 +347,7 @@ header {
         font-weight: 500;
         font-size: 16px;
         color: rgba($black, .8);
-        margin-bottom: 75px;
+        margin-bottom: 81px;
     }
     &__link {
         font-weight: 700;
@@ -357,6 +374,9 @@ header {
             border-bottom: 1.5px solid $black;
         }
     }
+    &__include {
+        margin-left: 15.3rem;
+    }
     &__in {
         font-weight: 700;
         font-size: 16px;
@@ -382,16 +402,16 @@ header {
         border-bottom: 1px solid $black;
         padding-bottom: 130px;
     }
-    &__content {
-        border-bottom: 1px solid $black;
-        padding-bottom: 155px;
-    }
     &__title {
         line-height: 150%;
         letter-spacing: 0.03em;
         text-transform: uppercase;
         max-width: 300px;
         margin: 0;
+    }
+    &__content {
+        border-bottom: 1px solid $black;
+        padding-bottom: 155px;
     }
     &__text {
         line-height: 150%;
@@ -400,14 +420,17 @@ header {
     }
     &__description {
         max-width: 500px;
+        margin-top: 0;
+        margin-left: 22rem;
     }
     &__social {
         display: flex;
-        gap: 2rem;
+        gap: 3rem;
         align-items: flex-end;
     }
     &__contact {
         padding-top: 60px;
+        margin-left: 22rem;
     }
     &__label {
         font-size: 12px;
@@ -421,6 +444,7 @@ header {
         background-color: rgba($black, .05);
         padding: 24px 347px 24px 20px;
         margin-top: 12px;
+        margin-bottom: 0.7rem;
         &:focus {
             outline: none;
             color: $black;
@@ -432,8 +456,8 @@ header {
         color: $white;
         border: none;
         background-color: $red;
-        padding: 21px 236px;
-        margin-top: 40px;
+        padding: 23px 236px;
+        margin-top: 34px;
         &:hover {
             background-color: #EA0E00;
             cursor: pointer;
