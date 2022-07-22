@@ -450,6 +450,7 @@ header {
         margin-left: 22rem;
     }
     &__label {
+        display: block;
         font-size: 12px;
         color: rgba($black, .8);
     }
@@ -498,3 +499,105 @@ footer {
         }
     }
 }
+
+
+//----------------------------
+//-------  Dropdown ----------
+//----------------------------
+.drop{
+    display:inline-block;
+    position: relative;
+    text-align: center;
+    
+    input[type="checkbox"]{
+      display:none;
+      &:checked{
+        ~.drop-items{
+          opacity:1;
+          max-height: 400px;
+          padding: .6rem 0;
+        }
+        ~.control{       
+          z-index:99;
+          box-shadow:0 0 0 2px lighten($black, 20);
+          &:after{transform: rotate(180deg);}
+        }
+        ~.overlay-close{
+          transform: none;
+          pointer-events:initial;
+        }
+      }
+    }
+    
+    .control{
+      position:relative;
+      display:inline-block;
+      font-size: 12px;
+      cursor: pointer;
+      padding: 24px 347px 24px 20px;
+      margin-top: 12px;
+      margin-bottom: 0.7rem;
+      background: rgba($black, .05);  
+      transition: all .3s ease;
+      @media (hover: hover) {
+        &:hover{
+          opacity: .75;
+        }      
+      }
+      &:after{
+        content:"";
+        display:inline-block;      
+        height:.5em;
+        width:.5em;
+        margin-left: .8em;
+        background-image: url("data:image/svg+xml,%3Csvg fill='%23fff' xmlns='http://www.w3.org/2000/svg' width='16' height='13.838' viewBox='0 0 16 13.838'%3E%3Cpath d='M15.78,12.753a1.529,1.529,0,0,1-1.311,2.314H1.53A1.529,1.529,0,0,1,.219,12.753L6.69,1.969a1.528,1.528,0,0,1,2.619,0L15.78,12.753Z' transform='translate(16 15.067) rotate(180)'/%3E%3C/svg%3E%0A");
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: contain;      
+        transition: transform .3s ease;
+      }
+    }
+    
+    .drop-items{
+      position: absolute;
+      top: calc(100% + .4rem);    
+      width: 100%;
+      padding:0;
+      margin:0;
+      transition: all .3s ease;    
+      background: #fff;   
+      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+      border-radius: 4px;
+      overflow:hidden;
+      max-height:0;
+      opacity:0;
+      z-index:99;
+      
+      .item-drop{
+        list-style:none;
+        a{        
+          display:block;
+          color: #555;
+          text-decoration: none;
+          padding: .6rem;
+          transition: all .3s ease;
+          @media (hover: hover) {
+            &:hover{
+              background: #eee;
+            }          
+          }
+        }
+      }
+    }
+    
+    .overlay-close{
+      position: fixed;    
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      z-index:9;
+      transform: translate(100%,0);
+      pointer-events:none;
+    }
+  }
