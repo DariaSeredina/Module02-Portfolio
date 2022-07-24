@@ -89,6 +89,14 @@ header {
         margin-bottom: 106px;
         position: relative;
         z-index: 1;
+        &::before {
+            content: '';
+            border: 37px solid transparent;
+            border-bottom: 75px solid $red;
+            position: absolute;
+            top: -130px;
+            left: -152px;
+        }
     }
     &__contact {
         display: flex;
@@ -108,6 +116,25 @@ header {
         transition: .3s;
         &_vk {
             border: none;
+            position: relative;
+            z-index: 0;
+            &:after {
+                content: "";
+                width: 106px;
+                height: 106px;
+                background: #FFFFFF;
+                border-radius: 150px;
+                position: absolute;
+                top: -43px;
+                right: -211px;
+                z-index: -1;
+            }
+        }
+        &_inst {
+            z-index: 0;
+        }
+        &_linkedin {
+            z-index: 0;
         }
         &:hover {
             color: $red;
