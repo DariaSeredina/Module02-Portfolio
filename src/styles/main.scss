@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1140px;
     margin: 0 auto;
     padding-left:   15px;
     padding-right: 15px;
@@ -34,10 +34,10 @@ header {
     align-items: center;
     font-size: 1.4rem;
     padding-top: 41px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     &__nav {
         display: flex;
-        gap: 2.9rem;
+        gap: 2.5rem;
         list-style-type: none;
         padding-left: 0;
     }
@@ -62,13 +62,13 @@ header {
     background-color: $grey;
     &__img {
         width: 100%;
-        margin-bottom: 120px;
+        margin-bottom: 90px;
     }
     &__name {
         font-size: 2.8rem;
         position: relative;
         z-index: 1;
-        &::before {
+        &:before {
             content: '';
             width: 253px;
             height: 253px;
@@ -89,7 +89,7 @@ header {
         margin-bottom: 106px;
         position: relative;
         z-index: 1;
-        &::before {
+        &:before {
             content: '';
             border: 37px solid transparent;
             border-bottom: 75px solid $red;
@@ -145,12 +145,12 @@ header {
             border-left: none;
             padding: 0;
             display: flex;
-            gap: 2rem;
+            gap: 1.6rem;
             align-items: center;
             border-bottom: 2px solid transparent;
             padding-bottom: 1rem;
             transition: .3s;
-            &::after {
+            &:after {
                 content: '';
                 display: block;
                 background-image: url(../images/arrow.svg);
@@ -167,10 +167,10 @@ header {
     }
     &-skills {
         display: flex;
-        justify-content: space-between;
+        gap: 2rem;
         border-top: 1px solid $black;
         padding-top: 47px;
-        padding-bottom: 180px;
+        padding-bottom: 131px;
         margin-top: 49px; 
         &__title {
             font-size: 1.6rem;
@@ -179,11 +179,11 @@ header {
             &_advantage {
                 letter-spacing: initial;
                 text-transform: initial;
-                margin-bottom: 2rem;
+                margin-bottom: 2.2rem;
             }
         }
         &__text {
-            max-width: 258px;
+            max-width: 270px;
             font-size: 1.4rem;
             color: rgba($black, .8);
             line-height: 150%;
@@ -194,11 +194,12 @@ header {
 
 .about {
     background-color: $grey;
-    padding-bottom: 180px;
+    padding-bottom: 164px;
     &__content {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 60px;
+        align-items: baseline;
+        margin-bottom: 32px;
     }
     &__title {
         letter-spacing: 0.03em;
@@ -206,7 +207,7 @@ header {
     }
     &__text {
         color: rgba($black, .8);
-        max-width: 550px;
+        max-width: 561px;
         line-height: 150%;
     }
     &__advantage {
@@ -216,7 +217,7 @@ header {
         grid-row-gap: 3.5rem;
         grid-column-gap: 7rem;
         border-top: 1px solid $black;
-        padding-top: 60px;
+        padding-top: 47px;
     }
 }
 
@@ -225,13 +226,13 @@ header {
     padding-bottom: 95px;
     &__step {
         border-top: 1px solid $black;
-        padding: 39px 0;
+        padding: 34px 0;
         &_03 {
             border-bottom: 1px solid $black; 
         }
     }
     &__number {
-        margin-right: 3rem;
+        margin-right: 3.1rem;
     }
     &__text {
         margin: 0;
@@ -239,19 +240,19 @@ header {
     &__description {
         font-size: 1.6rem;
         color: rgba($black, .8);
-        margin-left: 50.9rem;
+        margin-left: 21.2rem;
         &_02 {
-            margin-left: 49rem;
+            margin-left: 19.3rem;
         }
         &_03 {
-            margin-left: 45.2rem;
+            margin-left: 15.8rem;
         }
     }
     &__portfolio-title {
         font-size: 74px;
         text-transform: uppercase;
-        padding-top: 200px;
-        padding-bottom: 110px;
+        padding-top: 185px;
+        padding-bottom: 52px;
         margin: 0;
         position: relative;
         z-index: 0;
@@ -262,7 +263,7 @@ header {
             background: #FFFFFF;
             border-radius: 255px;
             position: absolute;
-            top: 106px;
+            top: 94px;
             left: 346px;
             z-index: -1;
         }
@@ -281,10 +282,10 @@ header {
         justify-content: space-between;
         padding-top: 70px;
         border-bottom: 1px solid $black;
-        padding-bottom: 60px;
+        padding-bottom: 54px;
     }
     &__name {
-        margin-top: 4.2rem;
+        margin-top: 3.5rem;
     }
     &__list {
         list-style-type: none;
@@ -299,6 +300,11 @@ header {
         font-size: 1.6rem;
         color: rgba($black, .8);
     }
+    &__image {
+        position: relative;
+        z-index: 0;
+        margin-top: -1rem;
+    }
 }
 
 .benefit {
@@ -308,16 +314,16 @@ header {
         max-width: 900px;
         margin: 0;
         padding-top: 180px;
-        padding-bottom: 80px;
+        padding-bottom: 78px;
     }
     &__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-row-gap: 4rem;
-        grid-column-gap: 20rem;
+        grid-column-gap: 2rem;
         border-top: 1px solid $black;
-        padding-top: 80px;
-        padding-bottom: 180px;
+        padding-top: 54px;
+        padding-bottom: 166px;
     }
     &__item {
         display: flex;
@@ -345,13 +351,13 @@ header {
 
 .tool {
     background-color: $grey;
-    padding-bottom: 120px;
+    padding-bottom: 155px;
     &__grid {
         display: grid;
-        grid-template-columns: repeat(4, 360px);
+        grid-template-columns: repeat(4, 285px);
     }
     &__item {
-        height: 146px;
+        height: 145px;
         border: 1px solid rgba($black, .3);
     }
     &__image {
@@ -372,26 +378,36 @@ header {
 
 .rate {
     background-color: $grey;
-    padding-bottom: 140px;
-    &__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    &__grid-item {
+    padding-bottom: 120px;
+    &__flex {
+        display: flex;
         border-bottom: 1px solid $black;
-        padding-top: 60px;
-        padding-bottom: 76px;
-        &_none {
+        padding-top: 6rem;
+        padding-bottom: 2.5rem;
+        &_01 {
+            justify-content: space-between;
+            padding-top: 0;
+            padding-bottom: 5rem;
+        }
+        &_02 {
+            gap: 20rem;
+        }
+        &_03 {
+            gap: 24rem;
+        }
+        &_04 {
+            gap: 26rem;
             border: none;
         }
     }
     &__title {
+        position: relative;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        padding-bottom: 12.3rem;
         margin-top: 3.1rem;
-        position: relative;
         z-index: 0;
-        &::before {
+        &:before {
             content: "";
             width: 140px;
             height: 140px;
@@ -406,13 +422,14 @@ header {
     &__text {
         line-height: 150%;
         color: rgba($black, .8);
-        max-width: 555px;
-        margin-left: 15.7rem;
+        max-width: 552px;
+        margin-right: 8px;
     }
     &__name {
         line-height: 150%;
         max-width: 200px;
-        margin-bottom: 22px;
+        margin-bottom: 23px;
+        margin-top: 0;
     }
     &__description {
         font-weight: 500;
@@ -426,13 +443,13 @@ header {
         text-decoration: none;
         color: $black;
         display: flex;
-        gap: 1rem;
+        gap: 1.4rem;
         align-items: center;
         max-width: 170px;
         border-bottom: 1.5px solid transparent;
-        padding-bottom: 1rem;
+        padding-bottom: 2.7rem;
         transition: .3s;
-        &::after {
+        &:after {
             content: '';
             display: block;
             background-image: url(../images/arrow.svg);
@@ -445,26 +462,26 @@ header {
             border-bottom: 1.5px solid $black;
         }
     }
-    &__include {
-        margin-left: 15.3rem;
-    }
     &__in {
         font-weight: 700;
         font-size: 16px;
+        margin-top: 3px;
+        margin-bottom: 2.22rem;
     }
     &__list {
         font-size: 16px;
         line-height: 200%;
         color: rgba($black, .8);
-        padding-left: 20px;
+        padding-left: 15px;
     }
     &__price {
         font-weight: 700;
-        font-size: 42px;    
+        font-size: 42px;  
+        margin-top: 4.7rem;  
         &_circle {
             position: relative;
             z-index: 0;
-            &::before {
+            &:before {
                 content: '';
                 width: 90px;
                 height: 90px;
@@ -518,14 +535,11 @@ header {
             left: -177px;
         }
     }
-    &__content {
-        border-bottom: 1px solid $black;
-        padding-bottom: 155px;
-    }
     &__text {
+        position: relative;
         line-height: 150%;
         border-bottom: 1px solid $black;
-        padding-bottom: 70px;
+        padding-bottom: 33px;
     }
     &__description {
         max-width: 500px;
@@ -536,9 +550,25 @@ header {
         display: flex;
         gap: 3rem;
         align-items: flex-end;
+        padding-top: 35rem;
+    }
+    &__link {
+        font-size: 1.6rem;
+        color: $black;
+        text-decoration: none;
+        border-left: 1px solid rgba($black, .2);
+        padding-left: 2.5rem;
+        transition: .3s;
+        &_vk {
+            border: none;
+            padding: 0;
+        }
+        &:hover {
+            color: $red;
+        }
     }
     &__contact {
-        padding-top: 60px;
+        padding-top: 63px;
         margin-left: 22rem;
     }
     &__label {
