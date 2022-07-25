@@ -499,7 +499,7 @@ header {
 
 .feedback {
     background-color: $grey;
-    padding-bottom: 61px;
+    padding-bottom: 9px;
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -568,7 +568,7 @@ header {
         }
     }
     &__contact {
-        padding-top: 63px;
+        padding-top: 62px;
         margin-left: 22rem;
     }
     &__label {
@@ -582,9 +582,9 @@ header {
         color: rgba($black, .2);
         border: none;
         background-color: rgba($black, .05);
-        padding: 24px 347px 24px 20px;
-        margin-top: 12px;
-        margin-bottom: 0.7rem;
+        padding: 25px 347px 25px 20px;
+        margin-top: 13px;
+        margin-bottom: 2.2rem;
         &:focus {
             outline: none;
             color: $black;
@@ -596,8 +596,8 @@ header {
         color: $white;
         border: none;
         background-color: $red;
-        padding: 23px 235.5px;
-        margin-top: 34px;
+        padding: 23px 234.5px;
+        margin-top: 42px;
         &:hover {
             background-color: #EA0E00;
             cursor: pointer;
@@ -614,6 +614,7 @@ footer {
     justify-content: space-between;
     font-size: 12px;
     color: rgba($black, .3);
+    margin-top: -3.4rem;
     &__link {
         color: rgba($black, .3);
         &:hover {
@@ -655,7 +656,7 @@ footer {
       display:inline-block;
       font-size: 12px;
       cursor: pointer;
-      padding: 24px 18px 24px 20px;
+      padding: 25px 18px;
       margin-top: 12px;
       background: rgba($black, .05);  
       transition: all .3s ease;
@@ -679,11 +680,11 @@ footer {
       padding:0;
       margin:0;
       transition: all .3s ease;    
-      background: rgba($black, .05);
+      background: #e7e6e4;
       overflow:hidden;
       max-height:0;
       opacity:0;
-      z-index:99;
+      z-index:0;
       
       .item-drop {
         list-style:none;
