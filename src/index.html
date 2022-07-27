@@ -42,7 +42,7 @@
             <p class="main__name">Александр Антропов</p>
             <h1 class="main__title">web-разработчик</h1>
             <div class="main__contact">
-                <a href="#" class="main__link main__link_discuss">Обсудить проект</a>
+                <button onclick="document.getElementById('discuss').style.visibility='visible'" type="button" class="main__btn">Обсудить проект</button>
                 <div class="main-social">
                     <a href="" class="main__link main__link_vk">Vk</a>
                     <a href="" class="main__link main__link_inst">Instagram</a>
@@ -381,5 +381,43 @@
             </div>
         </div>
     </footer>
+    <div id="discuss" class="modal-discuss">
+        <div class="modal-content">
+          <div class="container">
+            <div class="modal-header">
+                <button onclick="document.getElementById('discuss').style.visibility='hidden'" class="closebtn"></button>
+            </div>
+            <div class="modal-section">
+                <h6 class="modal-title">Расскажите о своем проекте</h6>
+                <p class="modal-text">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+            </div>
+            <div class="modal-contact">
+                <label class="feedback__label">Телефон или почта</label>
+                <input class="feedback__input" type="text" placeholder="Введите телефон">
+                <label class="feedback__label">Выберите удобный способ связи</label>
+                <label class="dropdown">
+                    <input type="checkbox" id="target-dropdown-example">
+                    <span class="dropdown__text">Telegram</span> 
+                    <ul class="dropdown-items">
+                        <li class="dropdown__item">
+                           <a target="_blank" href="">WhatsApp</a>
+                        </li>
+                        <li class="dropdown__item">
+                           <a target="_blank" href="">Viber</a>
+                        </li>
+                        <li class="dropdown__item">
+                           <a target="_blank" href="">Звонок на телефон</a>
+                        </li>
+                        <li class="dropdown__item">
+                            <a target="_blank" href="">SMS сообщение</a>
+                         </li>
+                    </ul>
+                    <label for="target-dropdown-example" class="dropdown__close"></label>
+                </label>
+                <button class="feedback__button" type="submit">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 </html>

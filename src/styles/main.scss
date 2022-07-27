@@ -104,6 +104,32 @@ header {
         justify-content: space-between;
         align-items: center;
     }
+    &__btn {
+        font-size: 1.6rem;
+        font-weight: 700;
+        background-color: $grey;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        gap: 1.6rem;
+        align-items: center;
+        border: 2px solid transparent;
+        padding-bottom: 1rem;
+        transition: .3s;
+        &:after {
+            content: '';
+            display: block;
+            background-image: url(../images/arrow.svg);
+            width: 16px;
+            height: 12px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &:hover {
+            color: $black;
+            border-bottom: 2px solid $black;
+        }
+    }
     &-social {
         display: flex;
         gap: 3rem;
@@ -140,30 +166,6 @@ header {
         }
         &:hover {
             color: $red;
-        }
-        &_discuss {
-            font-weight: 700;
-            border-left: none;
-            padding: 0;
-            display: flex;
-            gap: 1.6rem;
-            align-items: center;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 1rem;
-            transition: .3s;
-            &:after {
-                content: '';
-                display: block;
-                background-image: url(../images/arrow.svg);
-                width: 16px;
-                height: 12px;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            &:hover {
-                color: $black;
-                border-bottom: 2px solid $black;
-            }
         }
     }
     &-skills {
@@ -706,6 +708,62 @@ footer {
             color: $black;
         }
     }
+}
+
+
+.modal {
+    &-discuss {
+        background-color: rgba($black, .7);
+        position: absolute;
+        top: 0;
+        left: 500px;
+    }
+    &-content {
+        max-width: 600px;
+        background-color: $grey;
+        margin: 0 auto;
+    }
+    &-header {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &-section {
+        border-bottom: 1px solid $black;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+    }
+    &-title {
+        margin: 0 0 1.5rem;
+        font-weight: 700;
+        font-size: 2.2rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &-text {
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        max-width: 371px;
+    }
+    &-contact {
+        padding-bottom: 40px;
+    }
+}
+
+.closebtn {
+    border: none;
+    background-image: url(../images/close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 
