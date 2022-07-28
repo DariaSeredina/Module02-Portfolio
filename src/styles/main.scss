@@ -226,9 +226,17 @@ header {
 .steps {
     background-color: $grey;
     padding-bottom: 9.5rem;
+    &__grid-line {
+        grid-column: span 2;
+        width: 100%;
+        height: 1px;
+        background: $black;
+    }
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 3.4rem;
+        align-items: center;
     }
     &__title {
         font-weight: 400;
@@ -236,13 +244,23 @@ header {
         margin: 0;
         &::before {
             content: '01';
-            margin-right: 3.5rem;
+            margin-right: 4rem;
+        }
+    }
+    &__title_02 {
+        &::before {
+            content: '02';
+        }
+    }
+    &__title_03 {
+        &::before {
+            content: '03';
         }
     }
     &__description {
         font-size: 1.6rem;
         color: rgba($black, .8);
-        margin-left: 21.2rem;
+        margin: 0;
     }
     &__portfolio-title {
         font-size: 7.4rem;
