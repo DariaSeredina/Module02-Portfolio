@@ -42,6 +42,9 @@ header {
         gap: 2.5rem;
         list-style-type: none;
         padding-left: 0;
+        @media (max-width: $r_tab_900) {
+            gap: 1.5rem;
+        }
     }
     a {
         color: $black;
