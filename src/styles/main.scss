@@ -10,15 +10,19 @@ $font-inter: 'Inter', sans-serif;
 $r_laptop_1440: 1440px;
 $r_tab_900: 900px;
 $r_tab_768: 768px;
+$r_tab_650: 650px;
+$r_mob_500: 500px;
 
 html {
     font-size: 10px;
+    overflow-x: hidden;
 }
 
 body {
     font-size: 2.8rem;
     font-family: $font-inter;
     color: $black;
+    overflow-x: hidden;
 }
 
 .container {
@@ -32,6 +36,9 @@ header {
     background-color: $grey;
     padding-top: 4.1rem;
     padding-bottom: 5rem;
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 4rem;
+    }
 }
 
 .header {
@@ -39,6 +46,9 @@ header {
     justify-content: space-between;
     align-items: center;
     font-size: 1.4rem;
+    @media (max-width: $r_tab_768) {
+        align-items: initial;
+    }
     &__navigation {
         @media (max-width: $r_tab_768) {
             display: none;
@@ -92,6 +102,9 @@ header {
 .main {
     background-color: $grey;
     padding-bottom: 13.1rem;
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 6rem;
+    }
     &__img {
         width: 100%;
         margin-bottom: 9rem;
@@ -99,22 +112,35 @@ header {
             height: 310px;
             object-fit: cover;
         }
+        @media (max-width: $r_mob_500) {
+            margin-bottom: 4rem;
+        }
     }
     &__name {
         font-size: 2.8rem;
         position: relative;
         z-index: 1;
-        &:before {
+        @media (max-width: $r_mob_500) {
+            font-size: 2.2rem;
+        }
+        &::before {
             content: '';
             width: 253px;
             height: 253px;
             display: block;
-            background: $white;
+            background-color: $white;
             border-radius: 150px;
             position: absolute;
             top: -59px;
             left: -130px;
             z-index: -1;
+            @media (max-width: $r_mob_500) {
+                width: 200px;
+                height: 200px;
+                border-radius: 140px;
+                top: -47px;
+                left: -95px;
+            }
         }
     }
     &__title {
@@ -131,7 +157,14 @@ header {
         @media (max-width: $r_tab_768) {
             font-size: 5.4rem;
         }
-        &:before {
+        @media (max-width: $r_tab_650) {
+            font-size: 4.4rem;
+        }
+        @media (max-width: $r_mob_500) {
+            font-size: 3.4rem;
+            margin-bottom: 15rem;
+        }
+        &::before {
             content: '';
             border: 37px solid transparent;
             border-bottom: 75px solid $red;
@@ -145,6 +178,15 @@ header {
             @media (max-width: $r_tab_900) {
                 border: 32px solid transparent;
                 border-bottom: 71px solid #D40000;
+            }
+            @media (max-width: $r_tab_768) {
+                border: 25px solid transparent;
+                border-bottom: 57px solid #D40000;
+            }
+            @media (max-width: $r_mob_500) {
+                border: 22px solid transparent;
+                border-bottom: 49px solid #D40000;
+                left: -4px;
             }
         }
     }
@@ -165,7 +207,10 @@ header {
         border: 2px solid transparent;
         padding-bottom: 1rem;
         transition: .3s;
-        &:after {
+        @media (max-width: $r_mob_500) {
+            font-size: 1.4rem;
+        }
+        &::after {
             content: '';
             display: block;
             background-image: url(../images/arrow.svg);
@@ -183,6 +228,9 @@ header {
         display: flex;
         gap: 3rem;
         margin-top: -1.3rem;
+        @media (max-width: $r_mob_500) {
+            gap: 1.5rem;
+        }
     }
     &__link {
         font-size: 1.6rem;
@@ -191,20 +239,36 @@ header {
         border-left: 1px solid rgba($black, .2);
         padding-left: 2.5rem;
         transition: .3s;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.4rem;
+            padding-left: 1.5rem;
+        }
         &_vk {
             border: none;
             position: relative;
             z-index: 0;
-            &:after {
+            &::after {
                 content: "";
                 width: 106px;
                 height: 106px;
-                background: #FFFFFF;
+                background-color: $white;
                 border-radius: 150px;
                 position: absolute;
                 top: -43px;
                 right: -211px;
                 z-index: -1;
+                @media (max-width: $r_tab_768) {
+                    width: 90px;
+                    height: 90px;
+                    top: -35px;
+                    right: -206px;
+                }
+                @media (max-width: $r_mob_500) {
+                    width: 70px;
+                    height: 70px;
+                    top: -28px;
+                    right: -151px;
+                }
             }
         }
         &_inst {
@@ -218,18 +282,26 @@ header {
         }
     }
     &-skills {
-        display: flex;
-        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2rem;
         border-top: 1px solid $black;
         padding-top: 4.7rem;
         margin-top: 4.9rem; 
         @media (max-width: $r_tab_768) {
-            flex-wrap: wrap;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $r_mob_500) {
+            padding-top: 4rem;
+            margin-top: 4.1rem;
         }
         &__title {
             font-size: 1.6rem;
             letter-spacing: 0.03em;
             text-transform: uppercase;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.4rem;
+            }
             &_advantage {
                 letter-spacing: initial;
                 text-transform: initial;
@@ -237,11 +309,13 @@ header {
             }
         }
         &__text {
-            max-width: 270px;
             font-size: 1.4rem;
             color: rgba($black, .8);
             line-height: 150%;
             margin-top: 2.1rem;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.2rem;
+            }
         }
     }
 }
@@ -249,6 +323,9 @@ header {
 .about {
     background-color: $grey;
     padding-bottom: 16.4rem;
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 8rem;
+    }
     &__content {
         display: flex;
         justify-content: space-between;
@@ -256,6 +333,10 @@ header {
         margin-bottom: 3.2rem;
         @media (max-width: $r_tab_768) {
             display: block;
+        }
+        @media (max-width: $r_mob_500) {
+            font-size: 2rem;
+            margin-bottom: 4rem;
         }
     }
     &__title {
@@ -272,14 +353,19 @@ header {
     }
     &__advantage {
         display: grid;
-        grid-template-columns: 220px 270px;
+        grid-template-columns: 227px 270px;
         justify-content: end;
         grid-row-gap: 3.5rem;
-        grid-column-gap: 7rem;
+        grid-column-gap: 6.3rem;
         border-top: 1px solid $black;
         padding-top: 4.7rem;
         @media (max-width: $r_tab_768) {
-            justify-content: start;;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: initial;
+            grid-column-gap: 2.3rem;
+        }
+        @media (max-width: $r_mob_500) {
+            padding-top: 4rem;
         }
     }
 }
@@ -287,11 +373,20 @@ header {
 .steps {
     background-color: $grey;
     padding-bottom: 9.5rem;
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 0;
+    }
     &__grid-line {
         grid-column: span 2;
         width: 100%;
-        height: 1px;
-        background: $black;
+        height: 0.5px;
+        background-color: $black;
+        &_none {
+            display: none;
+            @media (max-width: $r_mob_500) {
+                display: block;
+            }
+        }
     }
     &__grid {
         display: grid;
@@ -308,6 +403,9 @@ header {
         margin: 0;
         @media (max-width: $r_tab_900) {
             font-size: 2rem;
+        }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.8rem;
         }
         &::before {
             content: '01';
@@ -332,7 +430,7 @@ header {
         color: rgba($black, .8);
         margin: 0;
         @media (max-width: $r_tab_900) {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
     }
 }
@@ -350,16 +448,28 @@ header {
         margin: 0;
         position: relative;
         z-index: 0;
-        &:after {
+        @media (max-width: $r_mob_500) {
+            font-size: 4rem;
+            padding-top: 9rem;
+            padding-bottom: 7rem;
+        }
+        &::after {
             content: "";
             width: 465px;
             height: 465px;
-            background: #FFFFFF;
+            background-color: $white;
             border-radius: 255px;
             position: absolute;
             top: -5px;
             left: 346px;
             z-index: -1;
+            @media (max-width: $r_mob_500) {
+                width: 250px;
+                height: 250px;
+                border-radius: 245px;
+                top: 35px;
+                left: 205px;
+            }
         }
         &-box {
             background-color: $grey;
@@ -382,6 +492,10 @@ header {
     }
     &__name {
         margin-top: 4rem;
+        @media (max-width: $r_mob_500) {
+            font-size: 2.2rem;
+            margin-bottom: 0;
+        }
     }
     &__list {
         list-style-type: none;
@@ -390,11 +504,18 @@ header {
         line-height: 207%;
         color: rgba($black, .8);
         margin: 41px 0;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.4rem;
+            margin: 30px 0;
+        }
     }
     &__text {
         font-weight: 700;
         font-size: 1.6rem;
         color: rgba($black, .8);
+        @media (max-width: $r_mob_500) {
+            font-size: 1.4rem;
+        }
     }
     &__image {
         margin-top: -1rem;
@@ -408,7 +529,7 @@ header {
         }
         @media (max-width: $r_tab_768) {
             width: 93vw;
-            margin: 3rem 0;
+            margin: 4rem 0;
         }
     }
 }
@@ -420,6 +541,11 @@ header {
         margin: 0;
         padding-top: 18rem;
         padding-bottom: 7.8rem;
+        @media (max-width: $r_mob_500) {
+            font-size: 2rem;
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+        }
     }
     &__grid {
         display: grid;
@@ -432,17 +558,35 @@ header {
         @media (max-width: $r_tab_900) {
             grid-template-columns: repeat(2, 1fr);
         }
+        @media (max-width: $r_tab_768) {
+            padding-bottom: 12.6rem;
+        }
+        @media (max-width: $r_mob_500) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 3rem;
+            padding-top: 5rem;
+            padding-bottom: 8rem;
+        }
     }
     &__item {
         display: flex;
         align-items: center;
         gap: 4rem;
+        @media (max-width: $r_tab_650) {
+            gap: 2rem;
+        }
+        @media (max-width: $r_mob_500) {
+            gap: 4rem;
+        }
     }
     &__img {
         margin-top: 1.4rem;
     }
     &__content {
         max-width: 250px;
+        @media (max-width: $r_mob_500) {
+            max-width: initial;
+        }
     }
     &__title {
         font-weight: 600;
@@ -459,6 +603,12 @@ header {
 
 .tool {
     padding-bottom: 18.2rem;
+    @media (max-width: $r_tab_768) {
+        padding-bottom: 15rem;
+    }
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 12rem;
+    }
     &__grid {
         display: grid;
         grid-template-columns: repeat(4, 25%);
@@ -493,11 +643,26 @@ header {
 
 .rate {
     padding-bottom: 18rem;
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 12rem;
+    }
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 2rem;
         grid-row-gap: 6rem;
+        @media (max-width: $r_mob_500) {
+            grid-column-gap: 5rem;
+        }
+    }
+    &__item {
+        &_span {
+            @media (max-width: $r_tab_768) {
+                position: relative;
+                grid-column: span 2;
+                margin: -2rem 0 -4rem 0;
+            }
+        }
     }
     &__title {
         position: relative;
@@ -505,27 +670,41 @@ header {
         text-transform: uppercase;
         margin: 0;
         z-index: 0;
-        &:before {
+        @media (max-width: $r_mob_500) {
+            font-size: 2.2rem;
+        }
+        &::before {
             content: "";
             width: 140px;
             height: 140px;
-            background: #FFFFFF;
+            background-color: $white;
             border-radius: 150px;
             position: absolute;
             top: -55px;
             left: -68px;
             z-index: -1;
+            @media (max-width: $r_mob_500) {
+                border-radius: 142px;
+                top: -57px;
+                left: -65px;
+            }
         }
     }
     &__text {
         line-height: 150%;
         color: rgba($black, .8);
         margin: -0.5rem 0 2rem 0;
+        @media (max-width: $r_mob_500) {
+            font-size: 2.2rem;
+        }
     }
     &__name {
         font-weight: 400;
         line-height: 150%;
         margin: 0;
+        @media (max-width: $r_mob_500) {
+            font-size: 2.2rem;
+        }
     }
     &__description {
         font-weight: 500;
@@ -533,19 +712,25 @@ header {
         color: rgba($black, .8);
         margin-top: 2.3rem;
         margin-bottom: 8.1rem;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.4rem;
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
     }
     &__link {
         font-weight: 700;
         font-size: 1.6rem;
         text-decoration: none;
         color: $black;
+        max-width: 17rem;
         display: flex;
         gap: 1.4rem;
         align-items: center;
         border-bottom: 1.5px solid transparent;
         padding-bottom: 0.7rem;
         transition: .3s;
-        &:after {
+        &::after {
             content: '';
             display: block;
             background-image: url(../images/arrow.svg);
@@ -563,31 +748,46 @@ header {
         font-size: 1.6rem;
         margin-top: 0.3rem;
         margin-bottom: 2.2rem;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.4rem;
+        }
     }
     &__list {
         font-size: 1.6rem;
         line-height: 200%;
         color: rgba($black, .8);
         padding-left: 15px;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.4rem;
+        }
     }
     &__price {
         font-weight: 700;
         font-size: 4.2rem;  
         margin: 5.5rem 0 0 0;  
+        @media (max-width: $r_mob_500) {
+            font-size: 3rem;
+        }
         &_circle {
             position: relative;
             z-index: 0;
-            &:before {
+            &::before {
                 content: '';
                 width: 90px;
                 height: 90px;
                 display: block;
-                background: $white;
+                background-color: $white;
                 border-radius: 150px;
                 position: absolute;
                 top: -21px;
                 left: -46px;
                 z-index: -1;
+                @media (max-width: $r_mob_500) {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 145px;
+                    left: -33px;
+                }
             }
         }
     }
@@ -595,6 +795,9 @@ header {
 
 .feedback {
     padding-bottom: 5.2rem;
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 5rem;
+    }
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -606,6 +809,10 @@ header {
             display: flex;
             flex-direction: column;
         }
+        @media (max-width: $r_mob_500) {
+            grid-row-gap: 4rem;
+            padding-bottom: 9rem;
+        }
     }
     &__title {
         line-height: 150%;
@@ -615,12 +822,15 @@ header {
         margin: 0;
         position: relative;
         z-index: 0;
-        &:before {
+        @media (max-width: $r_mob_500) {
+            font-size: 2.2rem;
+        }
+        &::before {
             content: '';
             width:300px;
             height: 300px;
             display: block;
-            background: $white;
+            background-color: $white;
             border-radius: 150px;
             position: absolute;
             top: -29px;
@@ -630,8 +840,15 @@ header {
                 top: -93px;
                 left: -60px;
             }
+            @media (max-width: $r_mob_500) {
+                width:250px;
+                height: 250px;
+                border-radius: 146px;
+                top: -76px;
+                left: -52px;
+            }
         }
-        &:after {
+        &::after {
             content: '';
             border: 33px solid transparent;
             border-bottom: 75px solid $red;
@@ -648,11 +865,25 @@ header {
                 border: 32px solid transparent;
                 border-bottom: 71px solid #D40000;
             }
+            @media (max-width: $r_tab_768) {
+                top: -116px;
+                border: 25px solid transparent;
+                border-bottom: 57px solid #D40000;
+            }
+            @media (max-width: $r_mob_500) {
+                top: -97px;
+                left: 143px;
+                border: 21px solid transparent;
+                border-bottom: 47px solid #D40000;
+            }
         }
     }
     &__text {
         position: relative;
         line-height: 150%;
+        @media (max-width: $r_mob_500) {
+            font-size: 2.2rem;
+        }
     }
     &__description {
         margin: 0;
@@ -662,7 +893,7 @@ header {
         grid-column: span 2;
         width: 100%;
         height: 0.5px;
-        background: $black;
+        background-color: $black;
     }
     &__social {
         display: flex;
@@ -672,6 +903,10 @@ header {
             order: 1;
             margin: 0 auto;
         }
+        @media (max-width: $r_mob_500) {
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
     }
     &__link {
         font-size: 1.6rem;
@@ -680,6 +915,10 @@ header {
         border-left: 1px solid rgba($black, .2);
         padding-left: 2.5rem;
         transition: .3s;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.4rem;
+            padding-left: 1.5rem;
+        }
         &_vk {
             border: none;
             padding: 0;
@@ -688,7 +927,13 @@ header {
             color: $red;
         }
     }
+    &__contact {
+        @media (max-width: $r_mob_500) {
+            margin-top: 2rem;
+        }
+    }
     &__form {
+        position: relative;
         max-width: 558px;
         margin: 0 auto;
     }
@@ -699,11 +944,13 @@ header {
     }
     &__input {
         display: block;
+        width: 100%;
+        box-sizing: border-box;
         font-size: 1.2rem;
         color: rgba($black, .2);
         border: none;
         background-color: rgba($black, .05);
-        padding: 2.5rem 34.7rem 2.5rem 2rem;
+        padding: 2.5rem 0 2.5rem 2rem;
         margin-top: 1.3rem;
         margin-bottom: 2.2rem;
         &:focus {
@@ -717,7 +964,8 @@ header {
         color: $white;
         border: none;
         background-color: $red;
-        padding: 2.3rem 23.45rem;
+        padding: 2.3rem 0;
+        width: 100%;
         margin-top: 4.2rem;
         &:hover {
             background-color: #EA0E00;
@@ -727,9 +975,6 @@ header {
 }
 
 .dropdown {
-    display: inline-block;
-    position: relative;
-    text-align: center;
     input[type="checkbox"] {
         display: none;
         &:checked {
@@ -740,7 +985,7 @@ header {
             }
             ~.dropdown__text {       
                 z-index:99;
-                &:after{transform: rotate(180deg);}
+                &::after{transform: rotate(180deg);}
             }
             ~.dropdown__close {
                 transform: none;
@@ -749,20 +994,21 @@ header {
         }
     }
     &__text {
-        position: relative;
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        box-sizing: border-box;
         font-size: 1.2rem;
         cursor: pointer;
-        padding: 2.5rem 1.8rem;
+        padding: 2.5rem 2rem;
         margin-top: 1.2rem;
-        background: rgba($black, .05);
+        background-color: rgba($black, .05);
         transition: all .3s ease;
-        &:after {
+        &::after {
           content: "";
           display: inline-block;      
           height: 0.8rem;
           width: 1em;
-          margin-left: 38em;
           background-image: url(../images/arrow-feedback.svg);
           background-repeat: no-repeat;
           background-position: center;
@@ -771,31 +1017,27 @@ header {
         }    
     }
     &-items {
-        position: absolute;    
+        position: absolute; 
         width: 100%;
         padding:0;
         margin:0;
         transition: all .3s ease;    
-        background: #f0f0f0;
+        background-color: #f0f0f0;
         overflow: hidden;
         max-height: 0;
         opacity: 0;
         z-index: 99;    
     }
     &__item {
-        list-style: none;
-        a {        
-          display: block;
-          font-size: 1.2rem;
-          color: rgba($black, .4);
-          text-decoration: none;
-          text-align: start;
-          padding: .7rem 2rem;
-          transition: all .3s ease;
-          &:hover{
-            color: $black;
-          }          
-        }
+        font-size: 1.2rem;
+        color: rgba($black, .4);
+        padding: .7rem 2rem;
+        transition: all .3s ease;
+        list-style-type: none;
+        cursor: pointer;
+        &:hover{
+        color: $black;
+        }         
     }
     &__close {
         position: fixed;    
@@ -806,6 +1048,7 @@ header {
         z-index:9;
         transform: translate(100%,0);
         pointer-events:none;
+        cursor: pointer;
     }
 }
 
@@ -817,18 +1060,25 @@ header {
         font-size: 1.4rem;
         @media (max-width: $r_tab_768) {
             flex-direction: column-reverse;
-            gap: 2rem;
+            gap: 3rem;
         }
         &__nav {
             display: flex;
             gap: 2.5rem;
             list-style-type: none;
             padding-left: 0;
+            @media (max-width: $r_mob_500) {
+                gap: 3rem;
+                margin: 0;
+            }
         }
         a {
             color: $black;
             text-decoration: none;
             transition: .3s;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.2rem;
+            }
             &:hover {
                 color: $red;
             }
@@ -850,6 +1100,17 @@ header {
         @media (max-width: $r_tab_768) {
             flex-direction: column;
             align-items: center;
+        }
+        @media (max-width: $r_mob_500) {
+            margin-top: 3rem;
+        }
+        &__left-text {
+            @media (max-width: $r_mob_500) {
+                margin-bottom: 0;
+            }
+        }
+        &__right-text {
+            margin: 3rem 0;
         }
         &__link {
             color: rgba($black, .3);
