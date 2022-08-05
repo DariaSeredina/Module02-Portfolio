@@ -254,6 +254,9 @@ header {
             gap: 1rem;
             padding-bottom: 0.5rem;
         }
+        @media (max-width: $r_mob_340) {
+            gap: 0.5rem;
+        }
         &::after {
             content: '';
             display: block;
@@ -278,7 +281,7 @@ header {
             }
         }
     }
-    &-social {
+    &__social {
         display: flex;
         gap: 3rem;
         margin-top: -1.3rem;
@@ -838,12 +841,14 @@ header {
         &_span {
             @media (max-width: $r_tab_768) {
                 position: relative;
-                column: span 2;
+                grid-column: span 2;
                 margin: -2rem 0 -4rem 0;
             }
         }
         &_padding360 {
-            padding-right: 2rem;
+            @media (max-width: $r_mob_360) {
+                padding-right: 2rem;
+            }
         }
     }
     &__title {
@@ -1430,6 +1435,9 @@ header {
             @media (max-width: $r_mob_390) {
                 font-size: 1.4rem;
             }
+            &:hover {
+                color: $red;
+            }
         }
         &__mail {
             color: $black;
@@ -1438,6 +1446,9 @@ header {
             padding-left: 1rem;
             @media (max-width: $r_mob_390) {
                 font-size: 1.4rem;
+            }
+            &:hover {
+                color: $red;
             }
         }
     }
