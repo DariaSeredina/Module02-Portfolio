@@ -34,7 +34,7 @@
                     <a href="mailto:alexdev@gmail.com" class="header__mail">alexdev@gmail.com</a>
                 </div>
                 <div class="header-button">
-                    <button class="header-button__btn" type="button"></button>
+                    <button class="header-button__btn" type="button" onclick="openModal()"></button>
                 </div>
             </div>
         </div>
@@ -402,11 +402,48 @@
             </div>
         </footer>
     </div>
-    <div id="discuss" class="modal-discuss">
+    <div id="modal-header" class="modal-header">
+        <div class="container">
+            <div class="modal-close">
+                <button class="closebtn" type="button" onclick="closeModal()"></button>
+            </div>
+            <nav class="modal-navigation">
+                <ul class="modal-nav">
+                    <li class="modal-item modal-item_border-top">
+                        <a href="#" class="modal-item_link">Обо мне</a>
+                    </li>
+                    <li class="modal-item">
+                        <a href="#" class="modal-item_link">Портфолио</a>
+                    </li>
+                    <li class="modal-item">
+                        <a href="#" class="modal-item_link">Этапы работ</a>
+                    </li>
+                    <li class="modal-item">
+                        <a href="#" class="modal-item_link">Цены</a>
+                    </li>
+                    <li class="modal-item">
+                        <a href="#" class="modal-item_link">Обратная связь</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="modal-footer">
+                <div class="footer-menu__contact footer-menu__contact_modal">
+                    <a href="tel:89237777777" class="footer-menu__tel">8 923 777-77-77</a>
+                    <a href="mailto:alexdev@gmail.com" class="footer-menu__mail">alexdev@gmail.com</a>
+                </div>
+                <div class="feedback__social feedback__social_modal">
+                    <a href="" class="feedback__link feedback__link_vk feedback__link_modal">Vk</a>
+                    <a href="" class="feedback__link feedback__link_modal">Instagram</a>
+                    <a href="" class="feedback__link feedback__link_modal">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-discuss" class="modal-discuss">
         <div class="modal-content">
           <div class="container">
-            <div class="modal-header">
-                <button onclick="document.getElementById('discuss').style.visibility='hidden'" class="closebtn"></button>
+            <div class="modal-close">
+                <button class="closebtn" type="button"></button>
             </div>
             <div class="modal-section">
                 <h6 class="modal-title">Расскажите о своем проекте</h6>
@@ -440,5 +477,16 @@
           </div>
         </div>
     </div>
+    <script>
+        // Menu-header
+
+        function openModal() {
+            document.getElementById("modal-header").style.top = "0px";
+        }
+
+        function closeModal() {
+            document.getElementById("modal-header").style.top = "-800px";
+        }
+    </script>
 </body>
 </html>

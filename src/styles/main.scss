@@ -1209,6 +1209,11 @@ header {
             gap: 1rem;
             margin: 4.5rem auto 0;
         }
+        &_modal {
+            gap: 1rem;
+            justify-content: center;
+            padding-bottom: 4rem;
+        }
     }
     &__link {
         font-size: 1.6rem;
@@ -1230,6 +1235,10 @@ header {
         &_vk {
             border: none;
             padding: 0;
+        }
+        &_modal{
+            font-size: 1.2rem;
+            padding-left: 1rem;
         }
         &:hover {
             color: $red;
@@ -1428,6 +1437,13 @@ header {
                 color: $red;
             }
         }
+        &__contact {
+            &_modal {
+                font-size: 1.4rem;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+        }
         &__tel {
             color: $black;
             text-decoration: none;
@@ -1496,6 +1512,44 @@ header {
 
 
 .modal {
+    &-header {
+        background-color: $grey;
+        position: fixed;
+        height: 100%;
+        top: -800px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        transition: 0.3s;
+    }
+    &-close {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &-nav {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 4rem 0;
+    }
+    &-item {
+        font-size: 2.6rem;    
+        text-align: center;
+        border-bottom: 1px solid rgba($black, .2);
+        padding: 2rem 0;
+        &_border-top {
+            border-top: 1px solid rgba($black, .2);
+        }
+        &_link {
+            color: $black;
+            text-decoration: none;
+            transition: .3s;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
     &-discuss {
         background-color: rgba($black, .7);
     }
@@ -1503,12 +1557,6 @@ header {
         max-width: 600px;
         background-color: $grey;
         margin: 0 auto;
-    }
-    &-header {
-        padding-top: 20px;
-        padding-bottom: 15px;
-        display: flex;
-        justify-content: flex-end;
     }
     &-section {
         border-bottom: 1px solid $black;
