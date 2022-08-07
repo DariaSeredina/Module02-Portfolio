@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Александр Антропов</title>
 </head>
 <body>
     <header>
@@ -224,40 +224,72 @@
                         <div class="tool__image">
                             <img class="tool__img" src="images/html5.svg" alt="html">
                         </div>
+                        <div class="tool__tooltip">
+                            <h6 class="tool__title">HTML</h6>
+                            <p class="tool__description">Стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере</p>
+                        </div>
                     </div>
                     <div class="tool__item">
                         <div class="tool__image">
                             <img class="tool__img" src="images/css3.svg" alt="css">
+                        </div>
+                        <div class="tool__tooltip">
+                            <h6 class="tool__title">CSS</h6>
+                            <p class="tool__description">Формальный язык описания внешнего вида документа (веб-страницы), написанного с использованием языка разметки</p>
                         </div>
                     </div>
                     <div class="tool__item">
                         <div class="tool__image">
                             <img class="tool__img" src="images/js.svg" alt="js">
                         </div>
+                        <div class="tool__tooltip">
+                            <h6 class="tool__title">JavaScript ES6+</h6>
+                            <p class="tool__description">Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам</p>
+                        </div>
                     </div>
                     <div class="tool__item">
                         <div class="tool__image">
                             <img class="tool__img" src="images/jquery.svg" alt="jquery">
+                        </div>
+                        <div class="tool__tooltip">
+                            <h6 class="tool__title">JQuery</h6>
+                            <p class="tool__description">Библиотека JavaScript, предназначенная для упрощения обхода и манипулирования деревом HTML DOM, а также обработки событий, CSS-анимации и Ajax</p>
                         </div>
                     </div>
                     <div class="tool__item">
                         <div class="tool__image">
                             <img class="tool__img" src="images/bootstrap.svg" alt="bootstrap">
                         </div>
+                        <div class="tool__tooltip">
+                            <h6 class="tool__title">Bootstrap</h6>
+                            <p class="tool__description">Свободный набор инструментов для создания сайтов и веб-приложений. Включает в себя HTML- и CSS-шаблоны оформления для типографики, веб-форм, кнопок, меток, блоков навигации и прочих компонентов веб-интерфейса, включая JavaScript-расширения</p>
+                        </div>
                     </div>
                     <div class="tool__item">
                         <div class="tool__image">
                             <img class="tool__img tool__img_php" src="images/php.svg" alt="php">
+                        </div>
+                        <div class="tool__tooltip">
+                            <h6 class="tool__title">PHP</h6>
+                            <p class="tool__description">C-подобный скриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений</p>
                         </div>
                     </div>
                     <div class="tool__item">
                         <div class="tool__image">
                             <img class="tool__img" src="images/vue.svg" alt="vue">
                         </div>
+                        <div class="tool__tooltip">
+                            <h6 class="tool__title">Vue.js</h6>
+                            <p class="tool__description">JavaScript-фреймворк для создания пользовательских интерфейсов</p>
+                        </div>
                     </div>
                     <div class="tool__item">
                         <div class="tool__image">
                             <img class="tool__img" src="images/wordpress.svg" alt="wordpress">
+                        </div>
+                        <div class="tool__tooltip">
+                            <h6 class="tool__title">WordPress</h6>
+                            <p class="tool__description">Система управления контентом веб-ресурсов (CMS, Content Management System)</p>
                         </div>
                     </div>
                 </div>
@@ -450,35 +482,28 @@
                 <p class="modal-text">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
             </div>
             <div class="modal-contact">
-                <label class="feedback__label">Телефон или почта</label>
-                <input class="feedback__input" type="text" placeholder="Введите телефон">
-                <label class="feedback__label">Выберите удобный способ связи</label>
-                <label class="dropdown">
+                <div class="feedback__form">
+                    <label class="feedback__label">Телефон или почта</label>
+                    <input class="feedback__input" type="text" placeholder="Введите телефон">
+                    <label class="feedback__label">Выберите удобный способ связи</label>
+                    <label class="dropdown">
                     <input type="checkbox" id="target-dropdown-example">
                     <span class="dropdown__text">Telegram</span> 
-                    <ul class="dropdown-items">
-                        <li class="dropdown__item">
-                           <a target="_blank" href="">WhatsApp</a>
-                        </li>
-                        <li class="dropdown__item">
-                           <a target="_blank" href="">Viber</a>
-                        </li>
-                        <li class="dropdown__item">
-                           <a target="_blank" href="">Звонок на телефон</a>
-                        </li>
-                        <li class="dropdown__item">
-                            <a target="_blank" href="">SMS сообщение</a>
-                         </li>
+                    <ul class="dropdown-items dropdown-items_modal">
+                        <li class="dropdown__item">WhatsApp</li>
+                        <li class="dropdown__item">Viber</li>
+                        <li class="dropdown__item">Звонок на телефон</li>
+                        <li class="dropdown__item">SMS сообщение</li>
                     </ul>
                     <label for="target-dropdown-example" class="dropdown__close"></label>
-                </label>
-                <button class="feedback__button" type="submit">Отправить</button>
+                    </label>
+                    <button class="feedback__button" type="submit">Отправить</button>
+                </div>
+            </div>
             </div>
           </div>
-        </div>
     </div>
     <script>
-
         // Menu-header
 
         function openModal() {

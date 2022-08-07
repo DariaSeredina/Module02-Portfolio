@@ -790,7 +790,19 @@ header {
         }
     }
     &__item {
+        position: relative;
         border: 1px solid rgba($black, .3);
+        cursor: pointer;
+        &:hover {
+            .tool__img {
+                filter: grayscale(0);
+                opacity: 1;
+            }
+            .tool__tooltip {
+                visibility: visible;
+                transform: scale(1);
+            }
+        }
     }
     &__image {
         display: flex;
@@ -806,10 +818,37 @@ header {
         &_php {
             width: 37%;
         }
-        &:hover {
-            filter: grayscale(0);
-            opacity: 1;
-        }
+    }
+    &__tooltip {
+        position: absolute;
+        background-color: #E31B1B;
+        z-index: 1;
+        visibility: hidden;
+        padding: 3.5rem 1.5rem 2.7rem 1.5rem;
+        margin: -1.5rem 2rem;
+        transition: .3s ease-out;
+        transform: scale(0);
+        &::after {
+            content: "";
+            border: 10px solid rgba(0,0,0,0);
+            border-bottom: 10px solid #E31B1B;
+            position: absolute;
+            top: -18px;
+            right: 111px;        }
+    }
+    &__title {
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgba($white, 0.8);
+        text-align: center;
+        margin: 0 0 2rem 0;
+    }
+    &__description {
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgba($white, 0.8);
+        text-align: center;
+        margin: 0;
     }
 }
 
@@ -1327,10 +1366,6 @@ header {
                 z-index:99;
                 &::after{transform: rotate(180deg);}
             }
-            ~.dropdown__close {
-                transform: none;
-                pointer-events: initial;
-            }
         }
     }
     &__text {
@@ -1370,7 +1405,10 @@ header {
         overflow: hidden;
         max-height: 0;
         opacity: 0;
-        z-index: 99;    
+        z-index: 99;  
+        &_modal {
+            background-color: #e6e6e6;
+        }  
     }
     &__item {
         font-size: 1.2rem;
