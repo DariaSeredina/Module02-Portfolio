@@ -42,6 +42,9 @@ body {
 
 header {
     background-color: $grey;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
     padding-top: 4.1rem;
     padding-bottom: 5rem;
     @media (max-width: $r_mob_500) {
@@ -116,6 +119,7 @@ header {
     }
     &__img {
         width: 100%;
+        margin-top: 13rem;
         margin-bottom: 9rem;
         @media (max-width: $r_tab_768) {
             height: 310px;
