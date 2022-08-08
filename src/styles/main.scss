@@ -47,6 +47,9 @@ header {
     width: 100%;
     padding-top: 4.1rem;
     padding-bottom: 5rem;
+    @media (max-width: $r_tab_768) {
+        position: initial;
+    }
     @media (max-width: $r_mob_500) {
         padding-bottom: 3rem;
     }
@@ -124,6 +127,7 @@ header {
         @media (max-width: $r_tab_768) {
             height: 310px;
             object-fit: cover;
+            margin-top: 0;
         }
         @media (max-width: $r_mob_500) {
             margin-bottom: 4rem;
@@ -878,6 +882,9 @@ header {
         margin: -1.5rem 2rem;
         transition: .3s ease-out;
         transform: scale(0);
+        @media (max-width: $r_tab_768) {
+            display: none;
+        }
         &::after {
             content: "";
             border: 10px solid rgba(0,0,0,0);
@@ -1571,14 +1578,15 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 30;
+    @media (max-width: $r_tab_768) {
+        top: 50%;
+    }
     &-header {
         background-color: $grey;
-        position: fixed;
         height: 100vh;
-        top: -800px;
-        left: 0;
-        right: 0;
-        z-index: 10;
+        max-width: 100%;
+        top: 50%;
+        z-index: 99;
         transition: 0.5s ease-out;
     }
     &-close {

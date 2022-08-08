@@ -34,7 +34,7 @@
                     <a href="mailto:alexdev@gmail.com" class="header__mail">alexdev@gmail.com</a>
                 </div>
                 <div class="header-button">
-                    <button class="header-button__btn" type="button" onclick="openModal()"></button>
+                    <button class="header-button__btn main-btn" type="button" data-modal="1"></button>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
             <p class="main__name">Александр Антропов</p>
             <h1 class="main__title">web-разработчик</h1>
             <div class="main__contact">
-                <button type="button" class="main-btn" data-modal="1">Обсудить проект</button>
+                <button type="button" class="main-btn" data-modal="2">Обсудить проект</button>
                 <div class="main__social">
                     <a href="" class="main__link main__link_vk">Vk</a>
                     <a href="" class="main__link main__link_inst">Instagram</a>
@@ -308,7 +308,7 @@
                     <div class="rate__item rate__item_padding360">
                         <h4 class="rate__name">Разработка <br> лэндинга или сайт визитки</h4>
                         <p class="rate__description">Небольшой сайт состоящий из одной страницы</p>
-                        <button class="main-btn main-btn_rate" type="button" data-modal="1">Обсудить проект</button>
+                        <button class="main-btn main-btn_rate" type="button" data-modal="2">Обсудить проект</button>
                     </div>
                     <div class="rate__item">
                         <div class="rate__include">
@@ -325,7 +325,7 @@
                     <div class="rate__item rate__item_padding360">
                         <h4 class="rate__name">Разработка <br> корпоративного сайта</h4>
                         <p class="rate__description">Небольшой сайт с n-количеством страниц</p>
-                        <button class="main-btn main-btn_rate" type="button" data-modal="1">Обсудить проект</button>
+                        <button class="main-btn main-btn_rate" type="button" data-modal="2">Обсудить проект</button>
                     </div>
                     <div class="rate__item">
                         <div class="rate__include">
@@ -342,7 +342,7 @@
                     <div class="rate__item rate__item_padding360">
                         <h4 class="rate__name">Разработка <br> интернет - магазина</h4>
                         <p class="rate__description">Полноценный каталог вашей продукции</p>
-                        <button class="main-btn main-btn_rate" type="button" data-modal="1">Обсудить проект</button>
+                        <button class="main-btn main-btn_rate" type="button" data-modal="2">Обсудить проект</button>
                     </div>
                     <div class="rate__item">
                         <div class="rate__include">
@@ -434,10 +434,10 @@
             </div>
         </footer>
     </div>
-    <div id="modal-header" class="modal-header">
+    <div class="modal modal-header" data-modal="1">
         <div class="container">
             <div class="modal-close">
-                <button class="closebtn" type="button" onclick="closeModal()"></button>
+                <button class="closebtn" type="button"></button>
             </div>
             <nav class="modal-navigation">
                 <ul class="modal-nav">
@@ -471,7 +471,7 @@
             </div>
         </div>
     </div>
-    <div class="modal modal-discuss" data-modal="1">
+    <div class="modal modal-discuss" data-modal="2">
         <div class="modal-content">
           <div class="container">
             <div class="modal-closebtn">
