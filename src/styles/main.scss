@@ -101,16 +101,6 @@ header {
         @media (max-width: $r_tab_768) {
             display: block;
         }
-        &__btn {
-            background-image: url(../images/btn.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 26px;
-            height: 29px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
     }
 }
 
@@ -265,6 +255,16 @@ header {
         @media (max-width: $r_mob_340) {
             gap: 0.5rem;
         }
+        &__header {
+            background-image: url(../images/btn.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 26px;
+            height: 29px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
         &::after {
             content: '';
             display: block;
@@ -293,47 +293,47 @@ header {
         }
         &_rate {
             font-weight: 700;
-        font-size: 1.6rem;
-        border: none;
-        background-color: inherit;
-        display: flex;
-        gap: 1.4rem;
-        align-items: center;
-        padding-left: 0;
-        padding-bottom: 0.7rem;
-        cursor: pointer;
-        transition: .3s;
-        @media (max-width: $r_mob_500) {
-            font-size: 1.4rem;
-        }
-        @media (max-width: $r_mob_430) {
-            font-size: 1.3rem;
-        }
-        @media (max-width: $r_mob_360) {
-            font-size: 1.2rem;
-            gap: 1rem;
-            padding-bottom: 0.5rem;
-        }
-        @media (max-width: $r_mob_360) {
-            font-size: 1rem;
-        }
-        &::after {
-            content: '';
-            display: block;
-            background-image: url(../images/arrow.svg);
-            width: 15px;
-            height: 11px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            @media (max-width: $r_mob_430) {
-                width: 13px;
-                height: 9px;;
+            font-size: 1.6rem;
+            border: none;
+            background-color: inherit;
+            display: flex;
+            gap: 1.4rem;
+            align-items: center;
+            padding-left: 0;
+            padding-bottom: 0.7rem;
+            cursor: pointer;
+            transition: .3s;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.4rem;
             }
-        }
-        &:hover {
-            border-bottom: 1.5px solid $black;
-        }
-        }
+            @media (max-width: $r_mob_430) {
+                font-size: 1.3rem;
+            }
+            @media (max-width: $r_mob_360) {
+                font-size: 1.2rem;
+                gap: 1rem;
+                padding-bottom: 0.5rem;
+            }
+            @media (max-width: $r_mob_360) {
+                font-size: 1rem;
+            }
+            &::after {
+                content: '';
+                display: block;
+                background-image: url(../images/arrow.svg);
+                width: 15px;
+                height: 11px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                @media (max-width: $r_mob_430) {
+                    width: 13px;
+                    height: 9px;;
+                }
+            }
+            &:hover {
+                border-bottom: 1.5px solid $black;
+            }
+            }
     }
     &__social {
         display: flex;
@@ -614,6 +614,8 @@ header {
 }
 
 .gradient-box {
+    background: -webkit-gradient(linear, left top, left bottom, from(#E7E6E6), to(rgba(231, 230, 230, 0)));
+    background: -o-linear-gradient(top, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
     background: linear-gradient(180deg, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
 }
 
@@ -1333,7 +1335,7 @@ header {
         margin-bottom: 2.2rem;
         @media (max-width: $r_mob_390) {
             font-size: 1rem;
-            padding: 2rem 0 2.5rem 2rem;
+            padding: 2rem 0 2rem 2rem;
         }
         @media (max-width: $r_mob_360) {
             margin-bottom: 1.9rem;
@@ -1640,9 +1642,14 @@ header {
         margin: 0 0 1.5rem;
         font-weight: 700;
         font-size: 2.2rem;
+        line-height: 150%;
         letter-spacing: 0.03em;
         text-transform: uppercase;
         text-align: center;
+        @media (max-width: $r_mob_360) {
+            font-size: 1.6rem;
+            margin: 0 6rem 1.5rem 6rem;
+        }
     }
     &-text {
         margin: 0 auto;
@@ -1650,6 +1657,9 @@ header {
         line-height: 150%;
         text-align: center;
         max-width: 371px;
+        @media (max-width: $r_mob_360) {
+            font-size: 1.6rem;
+        }
     }
     &-contact {
         padding-bottom: 40px;
