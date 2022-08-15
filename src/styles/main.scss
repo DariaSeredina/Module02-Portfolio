@@ -101,16 +101,6 @@ header {
         @media (max-width: $r_tab_768) {
             display: block;
         }
-        &-btn {
-            background-image: url(../images/btn.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 26px;
-            height: 29px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
     }
 }
 
@@ -291,6 +281,22 @@ header {
         }
         &:active {
             outline: none;
+        }
+        &__header {
+            background-image: url(../images/btn.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 26px;
+            height: 29px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            &::after {
+                display: none;
+            }
+            &:hover {
+                border-bottom: none;
+            }
         }
         &_rate {
             font-weight: 700;
