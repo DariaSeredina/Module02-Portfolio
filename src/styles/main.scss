@@ -835,7 +835,10 @@ header {
 }
 
 .tool {
-    padding-bottom: 18.2rem;
+    padding-bottom: 31.2rem;
+    @media (max-width: $r_tab_900) {
+        padding-bottom: 18.2rem;
+    }
     @media (max-width: $r_tab_768) {
         padding-bottom: 15rem;
     }
@@ -848,7 +851,7 @@ header {
     &__grid {
         display: grid;
         grid-template-columns: repeat(4, 25%);
-        grid-template-rows: repeat(2, 10vw);
+        grid-template-rows: repeat(2, 89%);
         @media (max-width: $r_tab_900) {
             grid-template-rows: repeat(2, 13vw);
         }
@@ -901,7 +904,9 @@ header {
             border-bottom: 10px solid #E31B1B;
             position: absolute;
             top: -18px;
-            right: 111px;        }
+            left: 50%;
+            transform: translate(-50%);       
+        }
     }
     &__title {
         font-size: 1rem;
