@@ -1600,7 +1600,6 @@ header {
         transition: 0.5s ease-out;
     }
     &-close {
-        position: relative;
         padding-top: 20px;
         padding-bottom: 15px;
     }
@@ -1630,7 +1629,6 @@ header {
         background-color: rgba($black, .7);
     }
     &-content {
-        position: relative;
         max-width: 600px;
         background-color: $grey;
         margin: 0 auto;
