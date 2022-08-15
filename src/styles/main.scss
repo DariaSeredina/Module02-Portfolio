@@ -1683,6 +1683,9 @@ header {
     height: 20px;
     background-color: transparent;
     cursor: pointer;
+    @media (max-width: $r_tab_768) {
+        right: -15px;
+    }
 }
 
 .overlay {
