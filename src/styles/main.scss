@@ -101,6 +101,16 @@ header {
         @media (max-width: $r_tab_768) {
             display: block;
         }
+        &-btn {
+            background-image: url(../images/btn.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 26px;
+            height: 29px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
     }
 }
 
@@ -255,16 +265,6 @@ header {
         }
         @media (max-width: $r_mob_340) {
             gap: 0.5rem;
-        }
-        &__header {
-            background-image: url(../images/btn.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 26px;
-            height: 29px;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
         }
         &::after {
             content: '';
@@ -1623,12 +1623,12 @@ header {
         background-color: rgba($black, .7);
     }
     &-content {
+        position: relative;
         max-width: 600px;
         background-color: $grey;
         margin: 0 auto;
     }
     &-closebtn {
-        position: relative;
         padding-top: 20px;
         padding-bottom: 15px;
     }
@@ -1668,7 +1668,7 @@ header {
 .closebtn {
     position: absolute;
     top: 15px;
-    right: 0;
+    right: 15px;
     border: none;
     background-image: url(../images/close.svg);
     background-repeat: no-repeat;
