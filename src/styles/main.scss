@@ -179,9 +179,6 @@ header {
             font-size: 5.4rem;
         }
         @media (max-width: $r_tab_650) {
-            font-size: 4.4rem;
-        }
-        @media (max-width: $r_mob_500) {
             font-size: 3.4rem;
             margin-bottom: 15rem;
         }
@@ -636,6 +633,9 @@ header {
         margin: 0;
         position: relative;
         z-index: 0;
+        @media (max-width: $r_tab_650) {
+            font-size: 6rem;
+        }
         @media (max-width: $r_mob_500) {
             font-size: 4rem;
             padding-top: 9rem;
@@ -861,10 +861,6 @@ header {
         border: 1px solid rgba($black, .3);
         cursor: pointer;
         &:hover {
-            .tool__img {
-                filter: grayscale(0);
-                opacity: 1;
-            }
             .tool__tooltip {
                 visibility: visible;
                 transform: scale(1);
@@ -872,18 +868,19 @@ header {
         }
     }
     &__image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+        text-align: center;
     }
     &__img {
-        width: 27%;
         filter: grayscale(1);
         opacity: 0.3;
         transition: .3s;
+        cursor: pointer;
         &_php {
             width: 37%;
+        }
+        &:hover {
+            filter: grayscale(0);
+            opacity: 1;
         }
     }
     &__tooltip {
@@ -922,6 +919,11 @@ header {
         text-align: center;
         margin: 0;
     }
+}
+
+.tooltable {
+    padding-top: 10rem;
+    padding-bottom: 20rem;
 }
 
 .rate {
