@@ -42,8 +42,8 @@ body {
 }
 
 header {
-    background-color: $grey;
     position: fixed;
+    background-color: $grey;
     z-index: 99;
     width: 100%;
     padding-top: 4.1rem;
@@ -858,8 +858,15 @@ header {
     }
     &__item {
         position: relative;
-        border: 1px solid rgba($black, .3);
+        border-top: 1px solid rgba(1, 1, 1, 0.3);
+        border-left: 1px solid rgba(1, 1, 1, 0.3);
         cursor: pointer;
+        &_border {
+            border-bottom: 1px solid rgba(1, 1, 1, 0.3);
+            &-right {
+                border-right: 1px solid rgba(1, 1, 1, 0.3);
+            }
+        }
         &:hover {
             .tool__tooltip {
                 visibility: visible;
@@ -868,9 +875,13 @@ header {
         }
     }
     &__image {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
     &__img {
+        width: 27%;
         filter: grayscale(1);
         opacity: 0.3;
         transition: .3s;
@@ -919,11 +930,6 @@ header {
         text-align: center;
         margin: 0;
     }
-}
-
-.tooltable {
-    padding-top: 10rem;
-    padding-bottom: 20rem;
 }
 
 .rate {
