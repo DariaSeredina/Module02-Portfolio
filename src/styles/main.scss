@@ -27,7 +27,6 @@ body {
     font-family: $font-inter;
     color: $black;
     max-height: 100vh;
-    overflow-x: hidden;
 }
 
 .container {
@@ -46,8 +45,8 @@ header {
     background-color: $grey;
     z-index: 99;
     width: 100%;
-    padding-top: 4.1rem;
-    padding-bottom: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
     @media (max-width: $r_tab_768) {
         position: initial;
     }
@@ -74,6 +73,7 @@ header {
         gap: 2.5rem;
         list-style-type: none;
         padding-left: 0;
+        margin: 0;
         @media (max-width: $r_tab_900) {
             gap: 1.5rem;
         }
@@ -113,7 +113,7 @@ header {
     }
     &__img {
         width: 100%;
-        margin-top: 13rem;
+        margin-top: 12rem;
         margin-bottom: 9rem;
         @media (max-width: $r_tab_768) {
             height: 310px;
