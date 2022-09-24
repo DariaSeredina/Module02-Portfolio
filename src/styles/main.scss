@@ -1613,6 +1613,7 @@ header {
         transition: 0.5s ease-out;
     }
     &-close {
+        position: relative;
         padding-top: 20px;
         padding-bottom: 15px;
     }
@@ -1647,6 +1648,7 @@ header {
         margin: 0 auto;
     }
     &-closebtn {
+        position: relative;
         padding-top: 20px;
         padding-bottom: 15px;
     }
@@ -1686,7 +1688,7 @@ header {
 .closebtn {
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 0;
     border: none;
     background-image: url(../images/close.svg);
     background-repeat: no-repeat;
